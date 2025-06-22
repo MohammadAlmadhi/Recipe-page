@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+--Stone-100: hsl(30, 54%, 90%);
+--Stone-150: hsl(30, 18%, 87%);
+--Stone-600: hsl(30, 10%, 34%);
+--Stone-900: hsl(24, 5%, 18%);
+--Brown-800: hsl(14, 45%, 36%);
+--Rose-800: hsl(332, 51%, 32%);
+--Rose-50: hsl(330, 100%, 98%);
+  --border-radius: 20px;
+  --transision: 0.3s;
+  --p-font:16px;
+}
+
+body {
+  font-family: sans-serif,"Outfit" ;
+  background-color: var(--Stone-100);
+}
+
+.container{
+  width:600px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: var(--White);
+  border-radius: var(--border-radius);
+}
+
+.img img{
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 100%;
+}
+
+.container h1{
+  text-transform: capitalize;
+  color: var(--Stone-900);
+}
+p{
+  font-size: 16px;
+  color: var(--Stone-600);
+}
+
+.preparation{
+      background-color: hsl(332deg 51% 32% / 10%);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin: 20px;
+}
+.preparation h3{
+  color: var(--Rose-800);
+  margin-bottom: 10px;
+}
+.preparation ul{
+  list-style: none;
+}
+
+.preparation ul li{
+  padding-left: 30px;
+  position: relative;
+
+}
+
+.preparation ul li::before{
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: var(--Rose-800);
+border-radius: 50%;
+left: 0;
+top: 50%;
+}
