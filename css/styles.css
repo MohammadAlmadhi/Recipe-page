@@ -20,6 +20,7 @@
 body {
   font-family: sans-serif,"Outfit" ;
   background-color: var(--Stone-100);
+  box-sizing: border-box;
 }
 
 .container{
@@ -49,7 +50,7 @@ p{
       background-color: hsl(332deg 51% 32% / 10%);
     padding: 20px;
     border-radius: var(--border-radius);
-    margin: 20px;
+    margin: 20px 0;
 }
 .preparation h3{
   color: var(--Rose-800);
@@ -62,7 +63,7 @@ p{
 .preparation ul li{
   padding-left: 30px;
   position: relative;
-
+  margin-bottom: 5px;
 }
 
 .preparation ul li::before{
@@ -74,4 +75,53 @@ p{
 border-radius: 50%;
 left: 0;
 top: 50%;
+    transform: translateY(-50%);
+}
+
+section{
+      padding-bottom: 20px;
+    border-bottom: 1px solid var(--Stone-900);
+}
+
+section .section-title {
+      color: var(--Brown-800);
+    text-transform: capitalize;
+    margin: 30px 0;
+}
+
+section ul{
+  list-style: none;
+}
+
+section ul li{
+  position: relative;
+  padding-left:40px;
+  margin-bottom: 10px; ;
+}
+
+section > .counter li::before,
+section.ingredients ul li::before{
+  position: absolute;
+  left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section.ingredients ul li::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--Brown-800);
+    border-radius: 50%;
+}
+
+section .counter{
+  counter-reset: counter;
+}
+section .counter > li{
+  counter-increment: counter;
+}
+section > .counter li::before{
+  content: counter(counter);
+    color: var(--Brown-800);
+    font-weight: bold;
 }
